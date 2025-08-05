@@ -96,7 +96,7 @@ export default function Home() {
                 id="frequency"
                 value={frequency}
                 onChange={(e) => setFrequency(e.target.value)}
-                className="w-full text-black p-3 border-2 border-orange-300 rounded-lg focus:border-orange-500 focus:outline-none font-semibold"
+                className="w-full  p-3 border-2 border-orange-300 rounded-lg focus:border-orange-500 focus:outline-none font-semibold"
               >
                 <option value="">Select frequency</option>
                 <option value="single">Single Amount</option>
