@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Kuzhumandi Budget CalculatorA simple and fun JavaScript function to calculate how many kuzhumandis you can afford based on your budget.This tool provides an analysis of your budget in terms of kuzhumandi consumption. It can handle various budget frequencies, including Single Amount, Daily, Weekly, Monthly, or Yearly.How to UseThe function can be easily integrated into any JavaScript project.Function SignaturekuzhumandiCalculator(amount, frequency, pricePerKuzhumandi, mealsPerDay)
+ParametersParameterTypeDefaultDescriptionamountnumberRequiredThe amount of money you have for your budget.frequencystring'Single Amount'The budget frequency. Options: 'Single Amount', 'Daily', 'Weekly', 'Monthly', 'Yearly'.pricePerKuzhumandinumber200The price of one quarter-portion of kuzhumandi.mealsPerDaynumber3The number of times you plan to eat kuzhumandi per day.ReturnsThe function returns a formatted string containing a detailed analysis of your kuzhumandi budget.ExamplesHere are a few examples of how to use the calculator with different budgets and parameters.Example 1: Monthly BudgetCalculate the kuzhumandi potential for a monthly budget of ₹10,000.const result = kuzhumandiCalculator(10000, 'Monthly', 200);
+console.log(result);
+Output:--- Kuzhumandi Budget Analysis for your monthly budget of ₹10,000.00 ---
 
-## Getting Started
+Assuming a quarter kuzhumandi costs ₹200.00:
 
-First, run the development server:
+Total quarter kuzhumandis you can eat in the period: 50
+Days you can survive eating 3 times a day: 16 days
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Happy eating!
+Example 2: Weekly BudgetCalculate the kuzhumandi potential for a weekly budget of ₹2,500, with a higher price for mutton kuzhumandi.const result = kuzhumandiCalculator(2500, 'Weekly', 300);
+console.log(result);
+Output:--- Kuzhumandi Budget Analysis for your weekly budget of ₹2,500.00 (totaling ₹10,000.00 per month) ---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Assuming a quarter kuzhumandi costs ₹300.00:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Total quarter kuzhumandis you can eat in the period: 33
+Days you can survive eating 3 times a day: 11 days
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Happy eating!
