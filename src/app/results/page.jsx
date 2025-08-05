@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import React from 'react';
+import React, { Suspense } from 'react';
 import Image from "next/image";
 import Payment from "../payment.jpg";
 
@@ -82,7 +82,7 @@ function kuzhumandiCalculator(amount, frequency = 'Single Amount', pricePerKuzhu
 }
 
 
-export default function Results() {
+function ResultsContent() {
   const searchParams = useSearchParams();
   const amountStr = searchParams.get('amount');
   const frequency = searchParams.get('frequency');
@@ -233,5 +233,19 @@ export default function Results() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Results() {
+  return (
+    <Suspense fallback={
+      <div className="bg-orange-500 min-h-screen flex items-center justify-center p-4">
+        <div className="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md font-mono text-sm text-center">
+          <p className="text-black">Loading your Mandhi calculation...</p>
+        </div>
+      </div>
+    }>
+      <ResultsContent />
+    </Suspense>
   );
 }
